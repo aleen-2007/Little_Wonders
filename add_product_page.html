@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Wonders| Add product page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8C5843",
+              secondary: "#F5EFEB",
+              tertiary: "#F5EFEB",
+              neutral: "#FAF7F2",
+              darkText: "#36241C",
+              greish:"#E8E2DF"
+            },
+            fontFamily: {
+              header: ['"Playfair Display"', "serif"],
+              body: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      .tech-btn-active {
+        background-color: #8C5843 !important; /* primary */
+        color: #ffffff !important;            /* neutral */
+      }
+
+      /* to color the plus icon */
+      .tech-btn-active svg,
+      .tech-btn-active i {
+    fill: currentColor !important;
+    stroke: currentColor !important;
+    color: #ffffff !important;
+  }
+    </style>
+  </head>
+
+  <body class="bg-tertiary text-primary font-body min-h-screen">
+
+    <header class="bg-neutral flex items-center z-10 justify-between py-4 px-6 font-bold fixed top-0 w-full ">
+
+        <!--div for the elements on the top-left-->
+        
+        <div class="items-center flex gap-5 ">
+            <h2 class="font-header text-2xl px-8">Little Wonders</h2>
+            <span class="text-xs font-medium text-darkText">Artisan Studio Portal</span>
+            </div>
+            <!-- //div for the elements on the top-left// -->
+
+
+             <!--div for the elements on the top-right-->
+            <div class="flex items-center gap-5">
+                <span class="text-xs font-medium text-darkText">Oakhaven Ceramics • Studio Active</span>
+                <button>
+                    <i data-lucide="bell" class="w-5 h-5 text-primary "></i>
+                </button>
+                <button class="flex self-center items-center gap-1 bg-primary text-neutral rounded-3xl text-xs px-3 py-1 font-medium hover:bg-primary/70">
+                  <i data-lucide="plus" class="h-3 w-3"></i>
+                  <span>New Creation</span>
+                </button>
+                <div>
+                     <button class="flex gap-2 rounded-2xl justify-between text-xs border-2 border-grey px-3 py-0.5 hover:border-primary transition">
+                      <img src="images/cat.JPG" class="size-6 rounded-full ">
+                       <span class="flex self-center">Master Potter</span>
+                     </button>
+                </div>
+        </div>
+        <!-- //div for the elements on the top-right// -->
+    </header>
+
+    <!--the menu on the left-->
+    <aside class="flex flex-col fixed top-0 left-0 gap-6 w-64 min-h-screen bg-greish text-neutral p-6">
+      <div>
+        <h6 class="text-darkText/60 text-xs mt-12 font-semibold">ARTISAN WORKSPACE</h6>
+      </div>
+      <nav class="text-darkText text-sm font-body font-semibold flex flex-col gap-2 justify-start ">
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Overview & Stats</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition" >Products & Inventory</a>
+        <a href="#" class="p-3 rounded-2xl bg-primary text-neutral">Add Handcrafted Creation</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Orders & Dispatches</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Atelier Profile</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Payouts & Studio Earnings</a>
+        <h4 class="text-darkText/60 text-xs mt-3 font-normal font-semibold">PLATFORM VIEW</h4>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Platform Governance</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition" >Little Wonders Store Front</a>
+      </nav>
+      <div class="bg-neutral/50 p-2 rounded-3xl">
+        <div class="flex gap-2">
+          <i data-lucide="badge-check" class="w-4 h-4 text-primary font-semibold"></i>
+          <span class="text-xs text-primary font-semibold">Certified Studio</span>
+        </div>
+          <div class="mt-2 text-xs text-darkText">
+             Sustainable pottery & stone kiln guild compliance renewed
+          </div> 
+      </div>
+    </aside>
+    <!-- //the menu on the left// -->
+
+    <!--Main content-->
+    <main class="px-10  ml-60 pt-20 ">
+
+      <div class="flex justify-between items-start w-full">
+
+      <!--div for the text content on the left-->
+        <div  class="text-darkText/50 text-xs font-semibold pt-0  px-5  ">
+        <div class="flex">
+            <h6>Artisan Atelier &gt; Creations Catalog &gt;</h6>
+           <span class="text-primary">List New Creation</span>
+        </div>
+      <h1 class="text-primary font-header text-4xl mt-2">List a New Handcrafted Creation</h1>
+      <div class="text-darkText font-body font-normal text-sm mt-3 ">Document the soul, materials, and provenance of your handmade work for mindful patrons and bespoke collectors.</div> 
+      </div>
+
+      <!--div for the action buttons on the right-->
+      <div class="flex gap-4 items-center justify-end w-full">
+        <button class="mt-5 bg-greish/75 text-darkText text-sm font-semibold py-2 px-4 rounded-full whitespace-nowrap hover:bg-greish/100 transition">Save Draft</button>
+        <button class="mt-5 bg-primary text-neutral text-sm font-semibold py-2 px-4  rounded-full whitespace-nowrap transition-all duration-200 hover:-translate-y-1">Save & Publish Creation</button>
+      </div> 
+      <!-- //div for the action buttons on the right// -->
+      </div>
+
+      <!--div for the Steps Bar-->
+      <div class="flex gap-4 items-center justify-start w-full mt-6 bg-greish/30 p-4 rounded-lg">
+
+        <!--button 1-->
+        <button class="flex gap-2 text-xs  bg-primary text-neutral text-sm font-semibold py-1 px-4 rounded-lg whitespace-nowrap">
+          <span class="w-4 h-4 flex items-center justify-center bg-neutral text-primary rounded-full text-xs">1</span>
+          Identity & Narrative</button>
+          <!-- //button 1// -->
+
+          <div class="flex-1 h-[2px] bg-primary/60"></div>
+
+          <!--button 2-->
+        <button class="flex gap-2 text-xs text-darkText font-semibold py-1 px-4 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-greish">
+          <span class="w-4 h-4 flex items-center justify-center bg-greish rounded-full text-xs">2</span>
+          Media & Studio Imagery</button>
+        <!-- //button 2// -->
+
+        <div class="flex-1 h-[2px] bg-primary/60"></div>
+
+        <!--button 3-->
+        <button class="flex gap-2 text-xs text-darkText font-semibold py-1 px-4 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-greish ">
+          <span class="w-4 h-4 flex items-center justify-center bg-greish rounded-full text-xs">3</span>
+          Specifications & Materials</button>
+        <!-- //button 3// -->
+
+        <div class="flex-1 h-[2px] bg-primary/60"></div>
+
+        <!--button 4-->
+        <button class="flex gap-2 text-xs text-darkText font-semibold py-1 px-4 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-greish">
+          <span class="w-4 h-4 flex items-center justify-center bg-greish rounded-full text-xs">4</span>
+          Pricing & Batch Inventory</button>
+        <!-- //button 4// -->
+
+        <div class="flex-1 h-[2px] bg-primary/60"></div>
+
+        <!--button 5-->
+        <button class="flex gap-2 text-xs text-darkText font-semibold py-1 px-4 rounded-lg whitespace-nowrap transition-all duration-300 hover:bg-greish">
+          <span class="w-4 h-4 flex items-center justify-center bg-greish rounded-full text-xs">5</span>
+          Sustainable Shipping</button>
+        <!-- //button 5// -->
+
+      </div>
+      <!-- //div for the Steps Bar// -->
+
+      <!--div for the content of the page-->
+      <div class="flex gap-6 mt-4 h-[calc(100vh-300px)]">
+
+        <!--left column-->
+        <div class="w-3/5">
+        <!--top div-->
+        <div class="flex flex-col justify-center align-center w-170px pr-6 bg-white/50 rounded-xl p-6 relative">
+
+          <!--div for the title & the essential info-->
+          <div class="flex items-center justify-between w-full">
+            <i data-lucide="brain" class="self-center w-4 h-4 text-primary mr-1"></i>
+          <div class="text-xs text-darkText/50 font-semibold top-4 left-6">
+            SECTION 01
+          </div>
+
+          <div class="ml-auto text-xs text-darkText font-semibold top-4 right-6 bg-greish py-1 px-2 rounded-full">
+            Essential info
+          </div>
+          </div>
+          <!-- //div for the title & the essential info// -->
+
+          <h1 class="text-2xl font-semibold font-header text-primary">Creation Identity & Narrative</h1>
+          <p class="text-darkText text-sm mt-3">
+            Mindful patrons look for emotional resonance, the origin of source materials, and your artistic intent. 
+          </p>
+
+
+          <div class="flex flex-col">
+          <!--div for Creation Title-->
+          <div class="flex mt-6 gap-2">
+            <div>
+              <label for="creation-title" class="text-darkText font-semibold text-sm">Creation Title</label>
+            </div>
+            <div class="flex ml-auto text-darkText/50 text-xs font-semibold top-4 right-6 py-1 px-2 rounded-full">
+              <p>0</p>
+              <p>/90 chars</p>
+            </div>
+          </div>
+          <!-- //div for Creation Title// -->
+           <input type="text" id="creation-title" placeholder="e.g., Hand-Thrown Ribbed Terracotta Pitcher" class="bg-primary/10 py-3 px-4 rounded-lg placeholder-darkText/60 text-darkText focus:outline-darkText/20">
+           <label for="provenance-headline" class="text-darkText font-semibold text-sm mt-4">Short Provenance Headline</label>
+           <input type="text" id="provenance-headline" placeholder="e.g., Rustic earthenware fired with local Oaxaca clay." class="bg-primary/10 py-3 px-4 rounded-lg placeholder-darkText/60 text-darkText focus:outline-darkText/20">
+
+           <!--div for Atelier Guild Category Kiln / Workshop Origin-->
+           <div class="flex gap-4">
+            <!--div for Atelier Guild Category-->
+            <div class="flex flex-col w-1/2 mt-4">
+              <label for="atelier-guild-category" class="text-darkText font-semibold text-sm mt-4">Atelier Guild Category</label>
+              <select id="atelier-guild-category" class="bg-primary/10 py-3 px-4 rounded-lg placeholder-darkText/60 text-darkText focus:outline-darkText/20">
+                <option value="ceramics"  selected>Ceramics</option>
+                <option value="textiles">Textiles</option>
+                <option value="woodworking">Woodworking</option>
+                <option value="metalworking">Metalworking</option>
+                <option value="glassblowing">Glassblowing</option>
+                </select>
+            </div>
+            <!-- //div for Atelier Guild Category// -->
+
+            <!--div for Workshop Origin-->
+            <div class="flex flex-col w-1/2 mt-4">
+              <label for="workshop-origin" class="text-darkText font-semibold text-sm mt-4">Kiln / Workshop Origin</label>
+              <input type="text" id="workshop-origin" value="Oakhaven Kiln House, Oaxaca Valley" disabled placeholder="e.g., Oaxaca, Mexico" class="bg-primary/10 py-3 px-4 rounded-lg placeholder-darkText/60 text-darkText focus:outline-darkText/20">
+            </div>
+            <!-- //div for Workshop Origin// -->
+           </div>
+           <!-- //div for Atelier Guild Category Kiln / Workshop Origin// -->
+          </div>
+
+          <!--Artisanal Techniques Employed-->
+          <div class="flex flex-col mt-6">
+            <label for="artisanal-techniques" class="text-darkText font-semibold text-sm">Artisanal Techniques Employed</label>
+          </div>
+
+          <!--buttons under Artisanal Techniques Employed -->
+          <div class="flex gap-2 mt-3 items-center flex-wrap">
+          <button class="bg-greish flex  text-xs font-semibold py-1 px-3 rounded-full tech-btns whitespace-nowrap ">
+            <i data-lucide="plus" class="self-center w-3 h-3 text-primary "></i>
+            Hand-thrown Wheel
+          </button>
+
+          <button class="bg-greish flex  text-xs font-semibold py-1 px-3 rounded-full tech-btns whitespace-nowrap ">
+            <i data-lucide="plus" class="self-center w-3 h-3 text-primary "></i>
+            Wood-fired Kiln
+          </button>
+
+          <button class="bg-greish flex  text-xs font-semibold py-1 px-3 rounded-full tech-btns whitespace-nowrap ">
+            <i data-lucide="plus" class="self-center w-3 h-3 text-primary "></i>
+            Pit-fired Smoked</button>
+
+          <button class="bg-greish flex  text-xs font-semibold py-1 px-3 rounded-full tech-btns whitespace-nowrap ">
+            <i data-lucide="plus" class="self-center w-3 h-3 text-primary "></i>
+            Natural Ash Glazed</button>
+
+          <button class="bg-greish flex  text-xs font-semibold py-1 px-3 rounded-full tech-btns whitespace-nowrap ">
+            <i data-lucide="plus" class="self-center w-3 h-3 text-primary "></i>
+            Slow Coil Built</button>
+
+          </div>
+             <!--//buttons under Artisanal Techniques Employed// -->
+
+          <!-- //Artisanal Techniques Employed// -->
+
+          <!--The Maker's Narrative part-->
+          <div class="flex flex-col">
+
+            <!--top-->
+            <div class="flex mt-8">
+            <!--left part-->
+            <div class="flex gap-2">
+              <h5 class="text-darkText font-semibold whitespace-nowrap">The Maker's Narrative</h5>
+              <i data-lucide="file-pen-line" class="self-center w-4 h-4 text-primary"></i>
+            </div>
+            <!-- //left part// -->
+
+            <!--right part-->
+            <div class="float-right w-full">
+              <h5 class="float-right float-right text-xs font-semibold text-primary flex"> 
+                <i data-lucide="sparkles" class="self-center w-4 h-4 text-primary"></i>
+                Suggest Poetic Tone</h5>
+            </div>
+            <!-- //right part// -->
+          </div>
+          <!--//top//-->
+
+          <!--bottom-->
+          <div>
+            <textarea class="mt-2 w-full h-32 p-3 border rounded-lg bg-primary/10 text-darkText font-body focus:outline-darkText/20">Formed slowly upon a traditional kick-wheel, each pitcher reflects the quiet cadence of early morning studio practice.We harvest mineral-rich red clay from the foothills of San Marcos Tlapazola, kneading it with crushed river stone for structural resilience.Fired over forty-eight hours in an open-brick wood kiln fueled by fallen oak and wild pine branches, the vessel develops a subtle gradient of scorched umber and warm ochre glaze.Safe for cooling spring water, fresh herbal infusions, or seasonal tabletop flora</textarea>
+            
+          </div>
+          <h6 class="text-primary-50 font-body text-sm font-semibold mt-2">Mention firing temperatures (e.g. Cone 10 / 1280°C) and clay provenance.</h6>
+          <!-- //bottom// -->
+          </div>
+          <!-- //The Maker's Narrative part// -->
+           <!-- //top div// -->
+        </div>
+           <!--bottom div-->
+           <div class="flex flex-col w-170px  pr-6 bg-white/50 rounded-xl p-6 relative mt-5">
+            <div class="flex items-center justify-between w-full">
+            <i data-lucide="camera" class="self-center w-4 h-4 text-primary mr-1"></i>
+          <div class="text-xs text-darkText/50 font-semibold top-4 left-6">
+            SECTION 02
+          </div>
+
+          <div class="ml-auto text-xs text-primary font-semibold top-4 right-6 bg-greish py-1 px-2 rounded-full">
+            4 of 8 Uploaded
+          </div>
+          </div>
+          <h1 class="text-2xl font-semibold font-header text-primary">Studio Photography & Process Imagery</h1>
+          
+                     <!--Uploading pics sec-->
+
+           <div class=" bg-primary/10 mt-4 rounded-lg">
+            <label for="uploading" class="cursor-pointer flex flex-col m-auto mt-5 text-center items-center">
+                <i data-lucide="cloud-upload" class="w-8 h-8 rounded-full m-auto text-darkText mb-3 pt-2"></i>
+                <p class="text-darkText font-semibold">Drop studio raw captures here, or <span class="text-primary underline"> browse your gallery</span></p>
+                <br>
+                <p class="text-sm text-darkText/80 max-w-lg">
+                  Capture works under diffused early morning daylight. Include at least one
+                   detail macro of tactile glaze and one photo of your hands at the wheel. 
+                </p>
+                <pre>
+                  <p class="text-xs font-semibold font-body text-darkText/60">JPG, WEBP, PNG up to 25MB  •  Recommended 4:5 Portrait Aspect</p>
+                </pre>
+            </label>
+            <input id="uploading" type="file" class="hidden">
+           </div>
+           <!-- //Uploading pics sec// -->
+
+           <!--Image display flex-->
+            <div class="flex justify-between gap-3 mt-4">
+              <!--pic1-->
+              <div class="relative w-15 h-15 overflow-hidden">
+                <img src="images/primaryView.JPG" alt="Clay pottery" class="aspect-[3/4] object-cover rounded-md w-full transition-transform duration-500 hover:scale-110">
+                <span class="absolute top-1 left-1 text-xs text-darkText bg-neutral/80 px-2 py-1 rounded-full">COVER HERO</span>
+                <span  class="flex absolute bottom-1 left-2 text-xs text-neutral bg-primary/80 px-2 py-1 rounded-lg font-bold">01. Primary View 
+                  <i data-lucide="circle-check" class="w-3 h-3 rounded-full m-auto ml-1 text-neutral"></i>
+                </span>
+              </div>
+              <!-- //pic1// -->
+
+              <!--pic2-->
+              <div class="relative w-15 h-15 overflow-hidden">
+                <img src="images/glazeRim.JPG" alt="glaze Rim" class="aspect-[3/4] object-cover rounded-md w-full transition-transform duration-500 hover:scale-110">
+                <span class="absolute top-1 left-1 text-xs text-darkText bg-neutral/80 px-2 py-1 rounded-full">TEXTURE MACRO</span>
+                <span  class="flex absolute bottom-1 left-2 text-xs text-darkText bg-neutral/80  px-2 py-1 rounded-lg font-bold">02. Glaze Rim
+                  <i data-lucide="grip-vertical" class="w-3 h-3 rounded-full m-auto ml-5 text-darkText"></i>
+                </span>
+              </div>
+              <!-- //pic2// -->
+
+              <!--pic3-->
+              <div class="relative w-15 h-15 overflow-hidden">
+                <img src="images/wheelWork.JPG" alt="wheel Work" class="aspect-[3/4] object-cover rounded-md w-full transition-transform duration-500 hover:scale-110">
+                <span class="absolute top-1 left-1 text-xs text-darkText bg-neutral/80 px-2 py-1 rounded-full">STUDIO CRAFT</span>
+                <span  class="flex absolute bottom-1 left-2 text-xs text-darkText bg-neutral/80  px-2 py-1 rounded-lg font-bold">03. Wheel Work
+                  <i data-lucide="grip-vertical" class="w-3 h-3 rounded-full m-auto ml-5 text-darkText"></i>
+                </span>
+              </div>
+              <!-- //pic3// -->
+
+              <!--pic4-->
+              <div class="relative w-15 h-15 overflow-hidden">
+                <img src="images/interiorDecor.JPG" alt="interior Decor" class="aspect-[3/4] object-cover rounded-md w-full transition-transform duration-500 hover:scale-110">
+                <span class="absolute top-1 left-1 text-xs text-darkText bg-neutral/80 px-2 py-1 rounded-full">INTERIOR SCALE</span>
+                <span  class="flex absolute bottom-1 left-2 text-xs text-darkText bg-neutral/80  px-2 py-1 rounded-lg font-bold whitespace-nowrap">04. Interior Decor
+                  <i data-lucide="grip-vertical" class="w-3 h-3 rounded-full m-auto ml-3 text-darkText"></i>
+                </span>
+              </div>
+              <!-- //pic4// -->
+
+            </div>
+          <!-- //Image display flex// -->
+
+          <!--uploading reel sec-->
+          <div class="flex bg-primary/10 mt-5 rounded-lg justify-between p-4 text-xs">
+            <i data-lucide="video" class="w-6 h-6 m-auto ml-3 text-darkText"></i>
+            <div class="flex flex-col ml-5">
+             <span class=" text-darkText font-bold"> Process Video Loop (Optional)</span>
+             <span class="text-darkText/70">Add a 15-second ambient MP4 clip of trimming or kiln opening to boost collector engagement by 43%.</span>
+            </div>
+            <div>
+              <button class="bg-neutral/80 rounded-full font-semibold p-1 text-darkText transition hover:bg-primary/15">Upload Reel</button>
+            </div>
+          </div>
+          <!-- //uploading reel sec// -->
+           </div>
+
+        <!--Specifications & Raw Materials-->
+        <div class="flex flex-col w-170px bg-white/50 rounded-xl p-6 relative mt-5">
+
+          <!--upper titles-->
+          <div class="flex items-center w-full">
+            <i data-lucide="triangle-right" class="self-center w-4 h-4 text-primary mr-1"></i>
+          <div class="text-xs text-darkText/50 font-semibold top-4 left-6">
+            SECTION 03
+          </div>
+          <div class="ml-auto text-xs text-primary font-semibold top-4 right-6 bg-greish py-1 px-2 rounded-full">
+            Physical Dimensions
+          </div>
+        </div>
+        <!-- //upper titles// -->
+
+        <h1 class="text-2xl font-semibold font-header text-primary">Specifications & Raw Materials</h1>
+        <h3 class="text-darkText text-sm font-semibold mt-3">Ethically Harvested Raw Materials</h3>
+
+        <!--buttons div-->
+        <div class="flex gap-3 mt-2 text-darkText">
+          <div class="flex text-xs  font-semibold  bg-greish py-1 px-2 rounded-full">
+            Oaxacan Red River Clay
+            <button class="hover:text-red"><i data-lucide="X" class="self-center w-3 h-3 ml-1 transition hover:text-red-500"></i></button>
+          </div>
+          <div class="flex text-xs font-semibold  bg-greish py-1 px-2 rounded-full">
+            Natural Fallen Oak Ash
+            <button><i data-lucide="X" class="self-center w-3 h-3 ml-1 transition hover:text-red-500"></i></button>
+          </div>
+          <div class="flex text-xs font-semibold  bg-greish py-1 px-2 rounded-full">
+            Local Iron Earth Wash
+            <button><i data-lucide="X" class="self-center w-3 h-3 ml-1 transition hover:text-red-500"></i></button>
+          </div>
+        </div>
+
+        <div>
+            <button class="text-xs flex bg-greish/70 mt-2 rounded-full font-semibold text-sm px-2 py-1 transition hover:bg-greish">
+            <i data-lucide="plus" class="self-center w-3 h-3 mr-1  "></i>
+            Add Material
+          </button> 
+        </div>
+         <!-- //buttons div// -->
+
+         <!--Measurements sec-->
+         <div class="flex items-center gap-3">
+
+          <!--height div-->
+          <div class="m-2 flex flex-col mt-3 ">
+            <label for="height" class="text-xs font-semibold text-primary/70 m-2">HEIGHT</label>
+            <div class="flex items-center justify-between bg-greish/70 rounded-md border-2 rounded-2xl px-2 py-2 focus-within:border-primary transition-colors">
+            <input id="height" type="text" value="23.5" class="bg-transparent text-darkText rounded-md w-full min-w-0 focus:outline-none">
+            <span class="text-sm font-semibold text-primary/70">cm</span>
+            </div>
+          </div>
+          <!-- //height div// -->
+
+          <!--base diameter div-->
+          <div class="m-2 flex flex-col mt-3">
+             <label for="height" class="text-xs font-semibold text-primary/70 m-2">BASE DIAMETER</label>
+            <div class="flex items-center justify-between bg-greish/70 rounded-md border-2 rounded-2xl px-2 py-2 focus-within:border-primary transition-colors">
+            <input id="height" type="text" value="14.0" class="bg-transparent text-darkText rounded-md w-full min-w-0 focus:outline-none">
+            <span class="text-sm font-semibold text-primary/70">cm</span>
+            </div>
+          </div>
+            <!-- //base diameter div// -->
+             
+             <!--net weight div-->
+            <div class="m-2 flex flex-col mt-3 ">
+             <label for="height" class="text-xs font-semibold text-primary/70 m-2">NET WEIGHT</label>
+            <div class="flex items-center justify-between bg-greish/70 rounded-md border-2 px-2 py-2 focus-within:border-primary transition-colors">
+            <input id="height" type="text" value="840" class="bg-transparent text-darkText rounded-md w-full min-w-0 focus:outline-none">
+            <span class="text-sm font-semibold text-primary/70">grams</span>
+            </div>
+            </div>
+            <!-- //net weight div// -->
+
+         </div>
+         <!-- //Measurements sec// -->
+
+         
+          <h3 class="text-darkText text-sm font-semibold mt-3">Living Qualities & Guild Certifications</h3>
+
+          <div class="flex gap-3 w-full">
+          <!--first box-->
+          <div class="flex mt-2 bg-greish/80 rounded-md cursor-pointer p-3 flex-1 min-w-0">
+            <input type="checkbox" class="self-center ml-3 h-4 w-4 cursor-pointer shrink-0">
+            <!--text-the title+the description-->
+            <div class="flex flex-col ml-2 justify-center">
+              <!--title+icon-->
+              <div class="flex min-w-0">
+                <i data-lucide="leaf" class="self-center w-4 h-4 ml-2 shrink-0"></i>
+                <span  class=" text-darkText ml-1 text-xs font-semibold">Food Safe Glaze </span>
+              </div>
+              <!-- //title+icon// -->
+               <div class="text-xs text-darkText/70 min-w-0">
+                Lead-free, non-toxic
+               </div>
+            </div>
+            <!-- //text-the title+the description// -->
+          </div>
+            <!-- //first box// -->
+
+            <!--second box-->
+
+            <div class="flex mt-2 bg-greish/80 rounded-md cursor-pointer p-3 flex-1 min-w-0">
+            <input type="checkbox" class="self-center ml-3 h-4 w-4 cursor-pointer shrink-0">
+            <!--text-the title+the description-->
+            <div class="flex flex-col ml-2 justify-center">
+              <!--title+icon-->
+              <div class="flex min-w-0">
+                <i data-lucide="droplet" class="self-center w-4 h-4 ml-2 shrink-0"></i>
+                <span  class=" text-darkText ml-1 text-xs font-semibold">Handwash Recommended </span>
+              </div>
+              <!-- //title+icon// -->
+               <div class="text-xs text-darkText/70">
+                Preserves glaze patina
+               </div>
+            </div>
+            <!-- //text-the title+the description// -->
+          </div>
+
+            <!-- //second box// -->
+
+            <!--third box-->
+            <div class="flex mt-2 bg-greish/80 rounded-md cursor-pointer p-3 flex-1 min-w-0">
+            <input type="checkbox" class="self-center ml-3 h-4 w-4 cursor-pointer shrink-0">
+            <!--text-the title+the description-->
+            <div class="flex flex-col ml-2 justify-center">
+              <!--title+icon-->
+              <div class="flex flex-1 min-w-0">
+                <i data-lucide="tree-deciduous" class="self-center w-4 h-4 ml-2 shrink-0"></i>
+                <span  class=" text-darkText ml-1 text-xs font-semibold ">Plastic-Free Packaging </span>
+              </div>
+              <!-- //title+icon// -->
+               <div class="text-xs text-darkText/70">
+                Recycled wood wool
+               </div>
+            </div>
+            <!-- //text-the title+the description// -->
+          </div>
+            <!-- //third box// -->
+             </div>
+
+          </div>
+        
+        <!-- //Specifications & Raw Materials// -->
+
+
+        <!--Fair-Trade Pricing & Batch Inventory-->
+        <div class="flex flex-col w-170px bg-white/50 rounded-xl p-6 relative mt-5">
+          <!--upper titles-->
+          <div class="flex items-center w-full">
+            <i data-lucide="coins" class="self-center w-4 h-4 text-primary mr-1"></i>
+          <div class="text-xs text-darkText/50 font-semibold top-4 left-6">
+            SECTION 04
+          </div>
+          <div class="ml-auto text-xs text-primary font-semibold top-4 right-6 bg-pink-200 py-1 px-2 rounded-full">
+            Kiln Batch #04
+          </div>
+        </div>
+        <!-- //upper titles// -->
+          <h1 class="text-2xl font-semibold font-header text-primary">Fair-Trade Pricing & Batch Inventory</h1>
+
+          <!--Artisan Fair Price & Your Direct Studio Yield-->
+          <div class="flex gap-6">
+            <!---Artisan Fair Price sec-->
+            <div class="flex flex-col">
+              <label for="price" class="text-darkText text-sm font-semibold mt-6 mb-2">Artisan Fair Price ($ USD)</label>
+            <div class="flex items-center justify-between bg-greish/70 rounded-xl border-2 px-2 py-2 focus-within:border-primary transition-colors">
+              <span class="text-lg font-semibold text-darkText mr-2 font-header">$</span>
+            <input id="price" type="text" value="95.00" class="bg-transparent text-darkText text-xl font-semibold font-header rounded-md w-full min-w-0 focus:outline-none">
+            </div>
+            <div class="text-xs text-darkText/70 mt-1">
+              Reflects your studio time, fuel, and materials.
+            </div>
+            </div>
+            <!--- //Artisan Fair Price sec// -->
+
+            <!-- Your Direct Studio Yield-->
+            <div class="flex flex-col rounded-2xl items-center bg-greish/70 mt-3 p-4 w-[50%]">
+
+              <div class="flex gap-6 items-center">
+                <div class="text-sm">
+                  Your Direct Studio Yield (92%):
+                </div>
+                <div class="text-lg font-semibold text-darkText mr-2 font-header">
+                  $87.40
+                </div>
+              </div>
+
+              <!--the progress line-->
+              <div class="w-full bg-neutral h-1.5 rounded-full mt-2 min-w-0">
+                <div class="h-full w-[92%] rounded-full bg-primary"></div>
+              </div>
+              <!-- //the progress line// -->
+               <div class="text-xs text-darkText/50 mt-1 flex-1 min-w-0 font-semibold">
+                The 8% Craftique steward fee includes global
+                carbon-neutral courier offset, organic wool
+                packing supplies fund, and zero credit-card
+                fees.
+               </div>
+            </div>
+                
+            <!-- //Your Direct Studio Yield// -->
+          </div>
+          <!-- //Artisan Fair Price & Your Direct Studio Yield// -->
+
+            <!--Studio Batch SKU + In-Stock Quantity + Production Model-->
+              <div class="flex gap-3">
+              <div class="flex flex-col">
+              <label for="Studio Batch SKU" class="text-darkText text-sm font-semibold mt-6 mb-2">Studio Batch SKU</label>
+            <input id="Studio Batch SKU" type="text" value="CRT-OAX-902" class=" text-darkText text-md p-2 bg-greish/70 rounded-md border-2 min-w-0 outline-none focus:border-primary transition-colors">
+            </div>
+
+            <div class="flex flex-col">
+            <label for="In-Stock Quantity" class="text-darkText text-sm font-semibold mt-6 mb-2">In-Stock Quantity</label>
+            <input id="In-Stock Quantity" type="number" value="12" class=" text-darkText text-md p-2 bg-greish/70 rounded-md border-2 min-w-0 outline-none focus:border-primary transition-colors">
+            </div>
+
+             <div class="flex flex-col">
+            <label for="Production Model" class="text-darkText text-sm font-semibold mt-6 mb-2">Production Model</label>
+            <input id="Production Model" type="number" value="12" class=" text-darkText text-md p-2 bg-greish/70 rounded-md border-2 min-w-0 outline-none focus:border-primary transition-colors">
+            </div>
+            </div>
+               <!-- //Studio Batch SKU + In-Stock Quantity + Production Model// -->
+
+        </div>
+        <!-- //Fair-Trade Pricing & Batch Inventory// -->
+
+           <!-- //bottom div// -->
+        </div>
+        </div>
+        <!-- //left column// -->
+
+        <!--right column-->
+        <div class="w-1/3 pl-6">
+        </div>
+        <!-- //right column// -->
+
+      </div>
+      <!-- //div for the content of the page// -->
+
+
+    </main>
+    <!-- //Main content// -->
+
+
+
+    <script>
+      lucide.createIcons();
+
+      //when click on tech-btns
+      const btns=document.getElementsByClassName("tech-btns");
+      const icons=document.getElementsByClassName("plus");
+      for(const btn of btns){
+        btn.addEventListener("click", function(){
+          btn.classList.toggle("tech-btn-active");
+          const icon = this.querySelector("[data-lucide]");
+          if(icon){{
+            const currentIcon = icon.getAttribute("data-lucide");
+            if(currentIcon === "plus"){
+              icon.setAttribute("data-lucide", "check-line");
+            }
+            else{
+              icon.setAttribute("data-lucide", "plus");
+            }
+            lucide.createIcons();
+          }}
+        })
+        
+      }
+
+    </script>
+  </body>
+</html>
+
