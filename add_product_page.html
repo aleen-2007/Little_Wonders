@@ -211,7 +211,7 @@
               <label for="creation-title" class="text-darkText font-semibold text-sm">Creation Title</label>
             </div>
             <div class="flex ml-auto text-darkText/50 text-xs font-semibold top-4 right-6 py-1 px-2 rounded-full">
-              <p>0</p>
+              <p id="count">0</p>
               <p>/90 chars</p>
             </div>
           </div>
@@ -618,19 +618,43 @@
             </div>
 
             <div class="flex flex-col">
-            <label for="In-Stock Quantity" class="text-darkText text-sm font-semibold mt-6 mb-2">In-Stock Quantity</label>
-            <input id="In-Stock Quantity" type="number" value="12" class=" text-darkText text-md p-2 bg-greish/70 rounded-md border-2 min-w-0 outline-none focus:border-primary transition-colors">
+            <label for="In-Stock-Quantity" class="text-darkText text-sm font-semibold mt-6 mb-2">In-Stock Quantity</label>
+            <div class="flex">
+            <button id="minus" class="font-semibold text-darkText rounded-l-md text-md pl-2 bg-greish/70 min-w-0 text-center outline-none">-</button>
+            <input id="In-Stock-Quantity" type="text" value="12" class="font-semibold text-darkText text-md p-2 bg-greish/70 min-w-0 text-center outline-none">
+            <button id="plus2" class="font-semibold text-darkText rounded-r-md text-md pr-2 bg-greish/70  min-w-0 text-center outline-none">+</button>
+          </div>
             </div>
 
-             <div class="flex flex-col">
-            <label for="Production Model" class="text-darkText text-sm font-semibold mt-6 mb-2">Production Model</label>
-            <input id="Production Model" type="number" value="12" class=" text-darkText text-md p-2 bg-greish/70 rounded-md border-2 min-w-0 outline-none focus:border-primary transition-colors">
+             <div class="flex flex-col min-w-0">
+            <label for="Production-Model" class="text-darkText text-sm font-semibold mt-6 mb-2">Production Model</label>
+            <select id="Production-Model" class=" text-darkText text-sm p-2 bg-greish/70 rounded-md border-2 min-w-0 outline-none focus:border-primary transition-colors">
+              <option selected>In-Stock (Dispatches 48h)</option>
+              <option>Made-to-Order (Lead 3 wks)</option>
+              <option>Numbered Limited Edition</option>
+            </select>
             </div>
             </div>
                <!-- //Studio Batch SKU + In-Stock Quantity + Production Model// -->
 
         </div>
         <!-- //Fair-Trade Pricing & Batch Inventory// -->
+
+        <!--finishing & saving-->
+        <div class="mt-2 bg-greish/70 rounded-xl flex items-center justify-between w-full p-3">
+          <button class="text-darkText font-semibold text-sm flex transition hover:text-red-700">
+            <i data-lucide="trash" class="self-center w-4 h-4 mr-2 shrink-0"></i>
+            Discard Changes
+          </button>
+
+          <div class="flex gap-2 items-center float-right">
+            <button class=" bg-neutral/70 text-darkText text-sm font-semibold py-2 px-4 rounded-full whitespace-nowrap transition duration-500 hover:bg-greish/100">save draft</button>
+            <button class="flex bg-primary/85 text-neutral text-sm font-semibold py-2 px-4 rounded-full whitespace-nowrap transition duration-500 hover:bg-primary">
+              <i data-lucide="check" class="self-center w-4 h-4 mr-2 shrink-0"></i>
+              Publish Handcrafted Creation</burtton>
+          </div>
+        </div>
+        <!-- //finishing & saving// -->
 
            <!-- //bottom div// -->
         </div>
@@ -675,6 +699,29 @@
         
       }
 
+      //when click on - or + in Stock Quantity
+      const minus=document.getElementById("minus");
+      const plus=document.getElementById("plus2");
+      const result=document.getElementById("In-Stock-Quantity");
+      minus.addEventListener("click", ()=>{
+        let current=Number(result.value);
+        if(current>0){
+        result.value=current-1;
+        }
+      });
+
+      plus2.addEventListener("click", ()=>{
+        let current=Number(result.value);
+        result.value=current+1;
+      })
+
+      //in section 01,to change the count to match the length of creation-title box
+      const count=document.getElementById("count");
+      const text=document.getElementById("creation-title");
+      text.addEventListener("input", ()=>{
+        const currentLength=text.value.length;
+        count.textContent=currentLength;
+      })
     </script>
   </body>
 </html>
