@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Little Wonders| Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#8C5843",
+              secondary: "#F5EFEB",
+              tertiary: "#F5EFEB",
+              neutral: "#FAF7F2",
+              darkText: "#36241C",
+              greish:"#E8E2DF",
+              pink:"#FFD6D6"
+            },
+            fontFamily: {
+              header: ['"Playfair Display"', "serif"],
+              body: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    </head>
+
+    <body class="bg-tertiary text-primary font-body min-h-screen">
+        <header class="bg-neutral flex items-center z-10 justify-between py-4 px-6 font-bold fixed top-0 w-full ">
+
+        <!--div for the elements on the top-left-->
+        
+        <div class="items-center flex gap-5 ">
+            <h2 class="font-header text-2xl px-8">Little Wonders</h2>
+            <span class="text-xs font-medium text-darkText">Artisan Studio Portal</span>
+            </div>
+            <!-- //div for the elements on the top-left// -->
+
+
+             <!--div for the elements on the top-right-->
+            <div class="flex items-center gap-5">
+                <span class="text-xs font-medium text-darkText">Oakhaven Ceramics • Studio Active</span>
+                <button>
+                    <i data-lucide="bell" class="w-5 h-5 text-primary "></i>
+                </button>
+                <button class="flex self-center items-center gap-1 bg-primary text-neutral rounded-3xl text-xs px-3 py-1 font-medium hover:bg-primary/70">
+                  <i data-lucide="plus" class="h-3 w-3"></i>
+                  <span>New Creation</span>
+                </button>
+                <div>
+                     <button class="flex gap-2 rounded-2xl justify-between text-xs border-2 border-grey px-3 py-0.5 hover:border-primary transition">
+                      <img src="images/cat.JPG" class="size-6 rounded-full ">
+                       <span class="flex self-center">Master Potter</span>
+                     </button>
+                </div>
+        </div>
+        <!-- //div for the elements on the top-right// -->
+    </header>
+
+    <!--the menu on the left-->
+    <aside class="flex flex-col fixed top-0 left-0 gap-6 w-64 min-h-screen bg-greish text-neutral p-6">
+      <div>
+        <h6 class="text-darkText/60 text-xs mt-12 font-semibold">ARTISAN WORKSPACE</h6>
+      </div>
+      <nav class="text-darkText text-sm font-body font-semibold flex flex-col gap-2 justify-start ">
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Overview & Stats</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition" >Products & Inventory</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Add Handcrafted Creation</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Orders & Dispatches</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Atelier Profile</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition">Payouts & Studio Earnings</a>
+        <h4 class="text-darkText/60 text-xs mt-3 font-normal font-semibold">PLATFORM VIEW</h4>
+        <a href="#" class="p-3 rounded-2xl bg-primary text-neutral">Platform Governance</a>
+        <a href="#" class="p-3  hover:bg-primary/5 rounded-2xl transition" >Little Wonders Store Front</a>
+      </nav>
+      <div class="bg-neutral/50 p-2 rounded-3xl">
+        <div class="flex gap-2">
+          <i data-lucide="badge-check" class="w-4 h-4 text-primary font-semibold"></i>
+          <span class="text-xs text-primary font-semibold">Certified Studio</span>
+        </div>
+          <div class="mt-2 text-xs text-darkText">
+             Sustainable pottery & stone kiln guild compliance renewed
+          </div> 
+      </div>
+    </aside>
+    <!-- //the menu on the left// -->
+
+    <!--main content-->
+    <main class="px-10 mt-5  ml-60 pt-20 pb-5">
+        <div class="flex items-start w-full">
+            <!--div for the text content on the left-->
+        <div class="text-darkText/70 text-xs font-semibold pt-0 px-5">
+        <div class="flex">
+            <div class="bg-pink px-2 rounded-full">PLATFORM GOVERNANCE</div>
+            <span class="mx-1 text-darkText/30">/</span>
+            <span class="text-darkText">• Live Network Telemetry </span>
+        </div>
+        <h1 class="text-darkText font-header font-normal w-[75%] text-4xl mt-2">Platform Stewardship & Guild Governance </h1>
+        <div class="text-darkText font-body font-normal w-[85%] text-sm mt-3 ">Ecosystem overview: 64 Active Artisan Ateliers, 14,200 Mindful Patrons, 100% Plastic-Free Verified.</div> 
+      </div>
+         <!-- //div for the text content on the left// -->
+
+         <div class="flex flex-col mt-20 mr-20">
+
+            <button class="flex bg-primary/80 rounded-full p-2 items-center transition duration-200 hover:bg-primary">
+              <i data-lucide="shield-check" class="w-4 h-4 text-white mr-2 font-semibold"></i> 
+              <span class="text-xs text-white font-semibold mr-2">Review Atelier Applications</span>
+              <span class="bg-pink text-xs text-darkText font-semibold rounded-full p-1">3 pending</span>
+            </button>
+
+            <div class="flex"> 
+                <button class="bg-greish/80 flex rounded-full text-xs p-2 mt-2 font-semibold text-darkText transition duration-200 hover:bg-greish">
+                    <i data-lucide="leaf" class="w-4 h-4 text-darkText mr-2 font-semibold"></i>
+                    Monthly Impact Report
+                </button>
+                <button class="bg-greish/80 flex rounded-full text-xs p-2 mt-2 font-semibold ml-2 text-darkText transition duration-200 hover:bg-greish">
+                    <i data-lucide="download" class="w-4 h-4 text-darkText font-semibold"></i>
+                </button>
+            </div>
+         </div>
+
+        </div>
+
+    </main>
+    <!-- //main content// -->
+
+     <script>
+      lucide.createIcons();
+
+      //when click on tech-btns
+      const btns=document.getElementsByClassName("tech-btns");
+      const icons=document.getElementsByClassName("plus");
+      for(const btn of btns){
+        btn.addEventListener("click", function(){
+          btn.classList.toggle("tech-btn-active");
+          const icon = this.querySelector("[data-lucide]");
+          if(icon){{
+            const currentIcon = icon.getAttribute("data-lucide");
+            if(currentIcon === "plus"){
+              icon.setAttribute("data-lucide", "check-line");
+            }
+            else{
+              icon.setAttribute("data-lucide", "plus");
+            }
+            lucide.createIcons();
+          }}
+        })
+        
+      }
+ </script>
+     
+    </body>
+</html>
